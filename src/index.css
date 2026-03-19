@@ -38,6 +38,12 @@
   --color-cream-300: #D8D6CE;
   --color-ink:       #26251e;
   --color-ink-50:    rgba(38, 37, 30, 0.5);
+  --color-white: #ffffff;
+  --color-charcoal-950: #0b0c0f;
+  --color-charcoal-900: #12141a;
+  --color-charcoal-800: #1b1f2a;
+  --color-slate-200: #d6d9e0;
+  --color-slate-400: #9aa3b2;
 
   /* ── Semantic — purpose-based, reference primitives ──
    * These are the tokens you use in components.
@@ -57,11 +63,44 @@
    * e.g. --color-btn-primary → bg-btn-primary, hover:bg-btn-primary-hover */
   --color-btn-primary:         var(--color-action-primary);
   --color-btn-primary-hover:   var(--color-action-primary-hover);
+  --color-btn-primary-text:    var(--color-white);
   --color-btn-secondary:       var(--color-action-secondary);
   --color-btn-secondary-hover: var(--color-action-secondary-hover);
+  --color-btn-secondary-border: transparent;
+  --color-btn-secondary-text:   var(--color-text-primary);
 
   /* ── Typography ──
    * --font-{name} → font-{name}
    * e.g. --font-sans → font-sans (applied on <body> in index.html) */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  color-scheme: light;
+}
+
+/* Dark theme overrides.
+ * We keep the same token names so existing Tailwind utilities keep working. */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Semantic */
+  --color-surface:        var(--color-charcoal-950);
+  --color-card:           var(--color-charcoal-900);
+  --color-text-primary:   var(--color-slate-200);
+  --color-text-muted:     rgba(214, 217, 224, 0.6);
+  --color-text-secondary: var(--color-slate-400);
+  --color-action-primary:       var(--color-slate-200);
+  --color-action-primary-hover: #ffffff;
+  --color-action-secondary:        transparent;
+  --color-action-secondary-hover:  rgba(214, 217, 224, 0.08);
+
+  /* Component */
+  --color-btn-primary:         var(--color-action-primary);
+  --color-btn-primary-hover:   var(--color-action-primary-hover);
+  --color-btn-primary-text:    var(--color-charcoal-950);
+  --color-btn-secondary:       var(--color-action-secondary);
+  --color-btn-secondary-hover: var(--color-action-secondary-hover);
+  --color-btn-secondary-border: rgba(214, 217, 224, 0.35);
+  --color-btn-secondary-text:   var(--color-text-primary);
 }
