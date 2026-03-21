@@ -13,7 +13,7 @@
 /* ── LAYOUT ── */
 
 .flex          { display: flex; }
-.inline-flex   { display: inline-flex; }
+.inline-f89lex   { display: inline-flex; }
 .flex-col      { flex-direction: column; }
 .items-center  { align-items: center; }
 .items-start   { align-items: flex-start; }
@@ -72,8 +72,9 @@
 .bg-surface    { background-color: var(--color-surface); }    /* → TOKEN: page background */
 .bg-card       { background-color: var(--color-card); }       /* → TOKEN: card background */
 .bg-white      { background-color: #fff; }
-.bg-btn-secondary { background-color: var(--color-btn-secondary); } /* → TOKEN: default button */
-.bg-btn-primary   { background-color: var(--color-btn-primary); }   /* → TOKEN: CTA button */
+.bg-action-secondary { background-color: var(--color-action-secondary); } /* → TOKEN: secondary actions */
+.bg-action-primary   { background-color: var(--color-action-primary); }     /* → TOKEN: primary actions */
+.text-action-primary-fg { color: var(--color-action-primary-fg); }          /* → TOKEN: text on primary actions */
 
 
 /* ── COLOURS (text) ── */
@@ -87,12 +88,13 @@
 /* ── HOVER STATES ── */
 /* Tailwind prefix "hover:" applies the style only on mouse hover */
 
-.hover\:bg-btn-secondary-hover:hover { background-color: var(--color-btn-secondary-hover); } /* → TOKEN */
-.hover\:bg-btn-primary-hover:hover   { background-color: var(--color-btn-primary-hover); }   /* → TOKEN */
+.hover\:bg-action-secondary-hover:hover { background-color: var(--color-action-secondary-hover); } /* → TOKEN */
+.hover\:bg-action-primary-hover:hover   { background-color: var(--color-action-primary-hover); }   /* → TOKEN */
 
 
 /* ── BORDERS & CORNERS ── */
 
+.border-action-secondary-border { border-color: var(--color-action-secondary-border); } /* → TOKEN */
 .border-none   { border: none; }
 .rounded       { border-radius: 0.25rem; }   /* 4px */
 .rounded-lg    { border-radius: 0.5rem; }    /* 8px */

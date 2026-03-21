@@ -60,7 +60,7 @@ function Pricing() {
                 <button
                     type="button"
                     onClick={toggleTheme}
-                    className="text-sm text-text-primary bg-card px-3 py-2 rounded-lg shadow-sm hover:bg-btn-secondary-hover transition-colors duration-200"
+                    className="text-sm text-text-primary bg-card px-3 py-2 rounded-lg shadow-sm hover:bg-action-secondary-hover transition-colors duration-200"
                     aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
                 >
                     {theme === 'dark' ? 'Light' : 'Dark'}
